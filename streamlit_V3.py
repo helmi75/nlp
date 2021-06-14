@@ -70,7 +70,7 @@ def term_tf_idf(filtered_docs, tf_idf):
 def topic_model(nmf, tf_idf_fited, terms, top_words=10):
     # trouver le topic le plus probable pour chaque sentence
     # afficher les N mots les plus probables associés à chacun des topics
-    res = nmf.fit_transform(tf_idf_fited)
+    res = nmf.transform(tf_idf_fited)
     most_likely_topic_id = np.argmax(res)
     best_inds = np.argsort(nmf.components_[most_likely_topic_id])[
         ::-1][:top_words]
@@ -91,7 +91,7 @@ def main():
     nlp = spacy.blank("en")
     tf_idf = joblib.load('./model_tf_idf.joblib')
     terms = tf_idf.get_feature_names()
-    nmf = joblib.load('./model_nmf.joblib')
+    nmf = joblib.load('./model_nmf_fit.joblib')
 
     st.title('Analyse de sentiments négatifs')
     user_input = st.text_area("", "Saisir le texte à analyser (en anglais)")
