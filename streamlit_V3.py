@@ -12,6 +12,7 @@ import joblib
 
 import seaborn as sns
 import matplotlib.pyplot as plt
+import en_core_web_sm
 
 
 # Mettre en minuscul
