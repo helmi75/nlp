@@ -88,7 +88,7 @@ def main():
     stop_words += ['would', 'order', 'go', 'sit',
                    'I', 'st', 'think', 'yes', 'yet', 'yelp']
     
-    nlp = spacy.load("en")
+    nlp = spacy.blank("en")
     tf_idf = joblib.load('./model_tf_idf.joblib')
     terms = tf_idf.get_feature_names()
     nmf = joblib.load('./model_nmf.joblib')
