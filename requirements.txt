@@ -5,3 +5,5 @@ gensim
 joblib
 seaborn
 pip==21.1.2
+sklearn
+pandas
