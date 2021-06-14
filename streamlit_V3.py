@@ -92,6 +92,7 @@ def main():
     tf_idf = joblib.load('./model_tf_idf.joblib')
     terms = tf_idf.get_feature_names()
     nmf = joblib.load('./model_nmf_fit.joblib')
+    nmf  = nmf( regularization = ‘both’)
 
     st.title('Analyse de sentiments négatifs')
     user_input = st.text_area("", "Saisir le texte à analyser (en anglais)")
