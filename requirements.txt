@@ -1,0 +1,7 @@
+streamlit
+nltk
+spacy
+gensim
+joblib
+seaborn
+matplotlib.pyplot
