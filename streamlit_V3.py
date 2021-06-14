@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.decomposition import NMF
-# import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import NMF
+import pandas as pd
 import streamlit as st
 import numpy as np
 import nltk
