@@ -90,7 +90,7 @@ def main():
     
     nlp = spacy.blank("en")
     tf_idf = joblib.load('./model_tf_idf.joblib')
-    terms = tf_idf.get_feature_names()
+    terms = tf_idf.get_feature_names_out()
     nmf = joblib.load('./model_nmf_fit.joblib')
     
 
